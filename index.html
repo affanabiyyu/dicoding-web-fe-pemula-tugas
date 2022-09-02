@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bookshelf - Submisi Aplikasi Proyek FE Pemula Dicoding</title>
+
+	<!-- CSS bulma.io-->
+	<link rel="stylesheet" href="bulma.min.css">
+
+	<!-- Custom CSS -->
+	<style type="text/css">
+		footer a, footer a:visited {
+			color: gray;
+		}
+
+		footer a:hover {
+			color: cadetblue;
+		}
+
+		.card {
+			margin-bottom: 0.65rem;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Hero Page -->
+	<header class="hero is-dark is-small">
+		<div class="hero-body">
+			<p class="title">
+				Bookshelf App
+			</p>
+			<p class="subtitle">
+				Aplikasi Rak Buku
+			</p>
+		</div>
+	</header>
+
+	<!-- Konten -->
+	<main>
+		<!-- Section Cari Buku -->
+		<section class="section has-background-light">
+			<h1 class="title">Cari Buku</h1>
+			<div class="field is-grouped">
+				<p class="control is-expanded">
+					<input class="input" type="text" placeholder="Ketik judul buku" id="input-cari-buku">
+				</p>
+				<p class="control">
+					<button class="button is-primary" id="cari-buku">
+						Search
+					</button>
+				</p>
+			</div>
+			<section id="searched-books">
+				<!-- Hasil Pencarian akan ditampilkan disini oleh Javascript -->
+			</section>
+		</section>
+
+		<!-- Section 3 Kolom -->
+		<section class="columns">
+
+			<!-- Kolom Input Buku -->
+			<div class="column">
+				<form class="section" id="form-input">
+					<h1 class="title">Input Buku Baru</h1>
+					<div class="field">
+						<label class="label">Judul</label>
+						<div class="control">
+							<input class="input" type="text" placeholder="Judul buku" id="input-buku-judul" required>
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Penulis</label>
+						<div class="control">
+							<input class="input" type="text" placeholder="Penulis buku" id="input-buku-penulis" required>
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Tahun</label>
+						<div class="control">
+							<input class="input" type="number" placeholder="Tahun terbitan buku" id="input-buku-tahun" required>
+						</div>
+					</div>
+					<div class="field">
+						<div class="control">
+							<label class="checkbox">
+								<input type="checkbox" id="input-buku-selesai">
+								Buku Selesai Dibaca
+							</label>
+						</div>
+					</div>
+					<div class="field is-grouped">
+						<div class="control">
+							<button class="button is-primary" id="input-buku" type="submit" value="Submit">Input Buku</button>
+						</div>
+						<div class="control">
+							<button class="button is-primary is-light" id="reset-input-buku">Reset</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Bagian Belum Selesai Dibaca -->
+			<div class="column">
+				<section class="section">
+					<h1 class="title">Belum Selesai Dibaca</h1>
+					<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+						<thead><tr>
+							<th>Judul</th>
+							<th>Penulis</th>
+							<th>Tahun</th>
+							<th>Action</th>
+						</tr></thead>
+						<tbody id="ongoing-books">
+							<!-- Tabel buku akan ditampilkan JS di sini -->
+						</tbody>
+					</table>
+				</section>
+			</div>
+
+			<!-- Bagian Selesai Dibaca -->
+			<div class="column">
+				<section class="section">
+					<h1 class="title">Selesai Dibaca</h1>
+					<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+						<thead><tr>
+							<th>Judul</th>
+							<th>Penulis</th>
+							<th>Tahun</th>
+							<th>Action</th>
+						</tr></thead>
+						<tbody id="completed-books">
+							<!-- Tabel buku akan ditampilkan JS di sini -->
+						</tbody>
+					</table>
+				</section>
+			</div>
+
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer has-background-dark has-text-white">
+		<div class="content has-text-centered">
+			<p>
+				Aplikasi Rak Buku <br />
+				Submisi Proyek Kelas Dicoding - Aplikasi DOM & Web Storage Front End. <br />
+				CSS menggunakan <a href="https://bulma.io">bulma.io</a> <br />
+				2022 by <a href="https://github.com/affanabiyyu">Affan Abiyyu</a>
+			</p>
+		</div>
+	</footer>
+
+	<!-- Load JavaScript -->
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
